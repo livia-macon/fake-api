@@ -1,7 +1,19 @@
 {
+    [
     "error": [
-        {"type": 1, "tool": "TypeOne" },
+        {"type": 1, "tool": "TypeOne", "error": "Exception has ocurred JVMNotFoundException",
+         "product": "Documents", "motivation":"Erro normalmente ocorre no meodo read; Erro relacionado ao Java; Normalmente Java não esta instalado na maquina",
+         "solution": "É obrigatório ter Java instalado porque o módulo do botcity documents utiliza uma biblioteca que faz chamada para um código Java, inicialmente o módulo de leitura de documentos foi implementado em Java e na versão do python é feita basicamente uma chamada para esse módulo em Java"
+        },
         {"type": 2, "tool": "TypeTwo" }
     ]
-    
+
+    "Tools-tip": [
+        {"tool": "WebBot", "keyword": ["Dialog JS"], "step_one ": "Verificar se dialogo esta no escopo do browser, pois se não estiver, não é possivel usar os metodos do WebBot, tente fechar o dialogo usando o DesktopBot", "step_two": "Caso nem o desktop bot consiga clicar pode ser que seja um dialog em nível elevado (administrador) e o Windows bloqueia acesso via comandos de teclado, mouse e API"},
+        {
+            "tool": "WebBot", "keyword": ["Customize browser", "user_data_dir"], "step_one": "Por padrão sempre é gerada uma pasta temporária referente ao perfil. Isso é pra garantir que cada execução vai ser iniciada sempre com uma sessão do navegador limpa.",
+            "step_two": " Uma alternativa pode ser tentar utilizar o default_options do browser e informar o path para a propriedade user_data_dir"
+        }
+    ]
+    ]    
 }
