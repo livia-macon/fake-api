@@ -1,7 +1,7 @@
 {
     "error": [
-        {"type": 1, "tool": "BotMaestro" },
-        {"type": 2, "tool": "BotStudio" }
+        {"type": 1, "tool": "TypeOne" },
+        {"type": 2, "tool": "TypeTwo" }
     ]
     
 }
